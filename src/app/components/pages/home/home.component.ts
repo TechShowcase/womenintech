@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from "@angular/core";
-import { Profile } from "../../models/profile";
+import { Profile } from "../../../models/profile";
 import { HttpClient } from "@angular/common/http";
 
 import { MatCardModule } from "@angular/material/card";

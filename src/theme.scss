@@ -1,8 +1,8 @@
 @use "@angular/material" as mat;
 
 $light-theme: mat.define-theme((color: (theme-type: light,
-        primary: mat.$azure-palette,
-        tertiary: mat.$blue-palette,
+        primary: mat.$violet-palette,
+        tertiary: mat.$magenta-palette,
       ),
     ));
 
@@ -24,17 +24,17 @@ $dark-theme: mat.define-theme((color: (theme-type: dark,
   @include mat.color-variants-backwards-compatibility($dark-theme);
   @include mat.all-component-colors($dark-theme);
 
-  background-color: #3b3b3b;
+  background-color: #333;
   color: #c1b0cb;
 
   a,
   h1 {
-    color: #9061ac;
+    color: #9b7aae;
   }
 
   mat-toolbar {
-    background-color: #2d2d2d;
-    box-shadow: 0 0.1rem 0.5rem #0f0f0fc2;
+    background-color: #202020;
+    box-shadow: 0 0 0.4rem #000000da;
 
     // slide toggle overwrites
     mat-slide-toggle {
@@ -42,6 +42,7 @@ $dark-theme: mat.define-theme((color: (theme-type: dark,
         .mdc-switch__track {
           &::after {
             background-color: #453454 !important;
+            box-shadow: inset 0 0 0.4rem #000000b0 !important;
           }
         }
 
@@ -56,14 +57,22 @@ $dark-theme: mat.define-theme((color: (theme-type: dark,
     }
   }
 
+  .mat-drawer-container {
+    background-color: #343434;
+  }
+  mat-sidenav {
+    background-color: #2a2a2a;
+    box-shadow: 0 0 0.4rem #000000c9;
+  }
+
   mat-card {
-    background-color: #2d2d2d;
+    background-color: #202020;
 
     &.home {
       border: 0.3rem solid #49454e;
 
       &:hover {
-        background-color: #373639;
+        background-color: #2a292b;
         box-shadow: 0 0.1rem 0.3rem #000000a2;
         border-color: #9061ac;
 
@@ -81,21 +90,27 @@ $dark-theme: mat.define-theme((color: (theme-type: dark,
   }
 
   app-footer {
-    background-color: #2d2d2d;
+    background-color: #202020;
     color: #555;
-    box-shadow: 0 0.1rem 0.5rem #0f0f0fc2;
+    box-shadow: 0 0 0.4rem #000000da;
   }
 }
 
 // LIGHT THEME
 .light {
+
   a,
   h1 {
-    color: #816fc2;
+    color: #9e97a9;
+  }
+
+  button[mat-raised-button] {
+    background-color: #e8d9ec !important;
+    color: #a900a9 !important;
   }
 
   mat-toolbar {
-    background-color: #edeff4;
+    background-color: #e7e3e8;
     box-shadow: 0 0.1rem 0.3rem #0f0f0f2d;
 
     // slide toggle overwrites
@@ -103,7 +118,8 @@ $dark-theme: mat.define-theme((color: (theme-type: dark,
       button {
         .mdc-switch__track {
           &::before {
-            border-color: #d4d4d4;
+            border-color: #e4e3e3;
+            box-shadow: inset 0 0 0.4rem #00000070 !important;
           }
 
           &::after {
@@ -114,15 +130,24 @@ $dark-theme: mat.define-theme((color: (theme-type: dark,
     }
   }
 
+  .mat-drawer-container {
+    background-color: #f1f2f6;
+  }
+
+  mat-sidenav {
+    background-color: #ebecf3;
+    box-shadow: 0 0.1rem 0.3rem #0f0f0f2d;
+  }
+
   mat-card {
-    background-color: #edeff4;
+    background-color: #e7e3e8;
 
     &.home {
-      border: 0.3rem solid #dee0e4;
+      border: 0.3rem solid #ffffff;
 
       &:hover {
-        background-color: #dfe2e9;
-        border-color: #816fc2;
+        background-color: #ded9e8;
+        border-color: #c7c1d4;
 
         img {
           box-shadow: 0 0.1rem 0.5rem #00000070;
@@ -132,7 +157,7 @@ $dark-theme: mat.define-theme((color: (theme-type: dark,
   }
 
   app-footer {
-    background-color: #edeff4;
+    background-color: #e7e3e8;
     color: gray;
     box-shadow: 0 0 10px 0 #0f0f0f2d;
   }
