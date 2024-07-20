@@ -2,7 +2,7 @@
 
 ![WomenInTech](/public/images/branding/women-in-tech-logo-narrow.jpg)
 
-This repository holds the code for [womenintech.dev](https://womenintech.dev), an open-source platform dedicated to showcasing and celebrating women in various tech roles.
+This repository holds the code for [womenintech.dev](https://womenintech.dev), an open-source website dedicated to showcasing and celebrating women in various tech roles.
 
 ## About
 
