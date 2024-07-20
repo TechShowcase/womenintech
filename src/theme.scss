@@ -1,0 +1,139 @@
+@use "@angular/material" as mat;
+
+$light-theme: mat.define-theme((color: (theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+    ));
+
+$dark-theme: mat.define-theme((color: (theme-type: dark,
+        primary: mat.$violet-palette,
+        tertiary: mat.$magenta-palette,
+      ),
+    ));
+
+@include mat.core();
+@include mat.color-variants-backwards-compatibility($light-theme);
+
+:root {
+  @include mat.all-component-themes($light-theme);
+}
+
+// DARK THEME
+.dark {
+  @include mat.color-variants-backwards-compatibility($dark-theme);
+  @include mat.all-component-colors($dark-theme);
+
+  background-color: #3b3b3b;
+  color: #c1b0cb;
+
+  a,
+  h1 {
+    color: #9061ac;
+  }
+
+  mat-toolbar {
+    background-color: #2d2d2d;
+    box-shadow: 0 0.1rem 0.5rem #0f0f0fc2;
+
+    // slide toggle overwrites
+    mat-slide-toggle {
+      button {
+        .mdc-switch__track {
+          &::after {
+            background-color: #453454 !important;
+          }
+        }
+
+        .mdc-switch__handle-track {
+          .mdc-switch__handle {
+            &::after {
+              background: #9061ac !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  mat-card {
+    background-color: #2d2d2d;
+
+    &.home {
+      border: 0.3rem solid #49454e;
+
+      &:hover {
+        background-color: #373639;
+        box-shadow: 0 0.1rem 0.3rem #000000a2;
+        border-color: #9061ac;
+
+        img {
+          box-shadow: 0 0.1rem 0.3rem #000000;
+        }
+      }
+    }
+  }
+
+  .content {
+    mat-panel-title {
+      color: #c9bdd0;
+    }
+  }
+
+  app-footer {
+    background-color: #2d2d2d;
+    color: #555;
+    box-shadow: 0 0.1rem 0.5rem #0f0f0fc2;
+  }
+}
+
+// LIGHT THEME
+.light {
+  a,
+  h1 {
+    color: #816fc2;
+  }
+
+  mat-toolbar {
+    background-color: #edeff4;
+    box-shadow: 0 0.1rem 0.3rem #0f0f0f2d;
+
+    // slide toggle overwrites
+    mat-slide-toggle {
+      button {
+        .mdc-switch__track {
+          &::before {
+            border-color: #d4d4d4;
+          }
+
+          &::after {
+            background-color: grey !important;
+          }
+        }
+      }
+    }
+  }
+
+  mat-card {
+    background-color: #edeff4;
+
+    &.home {
+      border: 0.3rem solid #dee0e4;
+
+      &:hover {
+        background-color: #dfe2e9;
+        border-color: #816fc2;
+
+        img {
+          box-shadow: 0 0.1rem 0.5rem #00000070;
+        }
+      }
+    }
+  }
+
+  app-footer {
+    background-color: #edeff4;
+    color: gray;
+    box-shadow: 0 0 10px 0 #0f0f0f2d;
+  }
+}

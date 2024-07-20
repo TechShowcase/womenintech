@@ -1,0 +1,18 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    img {
+      width: 7rem;
+      border-radius: 0 0 0.5rem 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<mat-toolbar>
+  <div class="logo">
+    <a routerLink="/">
+      @if (themeService.themeSignal() === 'dark') {
+        <img src="/images/branding/women-in-tech-logo-narrow.jpg" alt="women-in-tech-logo">
+      } @else {
+        <img src="/images/branding/women-in-tech-logo-narrow-light.jpg" alt="women-in-tech-logo">
+      }
+    </a>
+  </div>
+  <div class="controls">
+    <div class="theme-control">
+      <mat-slide-toggle checked (click)="toggleTheme()"></mat-slide-toggle>
+    </div>
+  </div>
+</mat-toolbar>
