@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, inject } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, inject, Output } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -15,8 +15,16 @@ import { ThemeService } from '../../services/theme.service';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements AfterViewInit {
+
+  @Output() toggleSidenav = new EventEmitter<void>();
+
+  showSidenavToggle = false;
   switchIcons: any;
   themeService = inject(ThemeService);
+
+  onToggleSidenav() {
+		this.toggleSidenav.emit();
+	}
 
   ngAfterViewInit() {
     this.switchIcons = document.querySelector('.mdc-switch__icons');

@@ -4,15 +4,19 @@ mat-toolbar {
   align-items: center;
   width: 100%;
 
-  .logo {
+  .toolbar-start {
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 0.5rem;
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
 
-    img {
-      width: 7rem;
-      border-radius: 0 0 0.5rem 0.5rem;
+      img {
+        width: 7rem;
+        border-radius: 0 0 0.5rem 0.5rem;
+      }
     }
   }
 }

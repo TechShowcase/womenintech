@@ -1,10 +1,12 @@
 # WomenInTech
 
-This repository holds the code for [WomenInTech](https://womenintech.example.com), an open-source platform dedicated to showcasing and celebrating women in various tech roles.
+![WomenInTech](/public/images/branding/women-in-tech-logo-narrow.jpg)
+
+This repository holds the code for [womenintech.dev](https://womenintech.dev), an open-source platform dedicated to showcasing and celebrating women in various tech roles.
 
 ## About
 
-WomenInTech is a platform where the achievements of women in technology are highlighted and celebrated. It offers an easy way to filter and discover women developers, engineers, cybersecurity experts, data scientists, systems administrators, UX/UI designers, tech writers, and other tech professionals, providing visibility and recognition for their work. This open-source project aims to promote diversity and inspire more women to enter and thrive in the tech industry.
+**WomenInTech.dev** is a website where the achievements of women in technology are highlighted and celebrated. It offers an easy way to filter and discover women developers, engineers, cybersecurity experts, data scientists, systems administrators, UX/UI designers, tech writers, and other tech professionals, providing visibility and recognition for their work. This open-source project aims to promote diversity and inspire more women to enter and thrive in the tech industry.
 
 ### Key Features
 

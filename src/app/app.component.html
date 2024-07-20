@@ -1,5 +1,18 @@
 <div [class]="themeService.themeSignal()">
-  <app-header></app-header>
-  <router-outlet></router-outlet>
+  <app-header (toggleSidenav)="snav.toggle()"></app-header>
+  <mat-sidenav-container [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56" opened="open">
+      <mat-nav-list>
+        @for (nav of navItems; track nav) {
+        <a mat-list-item routerLink="{{nav.route}}" (click)="snav.toggle()">{{nav.name}}</a>
+        }
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
   <app-footer></app-footer>
 </div>

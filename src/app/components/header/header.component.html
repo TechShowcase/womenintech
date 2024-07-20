@@ -1,12 +1,15 @@
 <mat-toolbar>
-  <div class="logo">
-    <a routerLink="/">
-      @if (themeService.themeSignal() === 'dark') {
+  <div class="toolbar-start">
+    <button mat-icon-button (click)="onToggleSidenav()"><mat-icon>menu</mat-icon></button>
+    <div class="logo">
+      <a routerLink="/">
+        @if (themeService.themeSignal() === 'dark') {
         <img src="/images/branding/women-in-tech-logo-narrow.jpg" alt="women-in-tech-logo">
-      } @else {
+        } @else {
         <img src="/images/branding/women-in-tech-logo-narrow-light.jpg" alt="women-in-tech-logo">
-      }
-    </a>
+        }
+      </a>
+    </div>
   </div>
   <div class="controls">
     <div class="theme-control">
