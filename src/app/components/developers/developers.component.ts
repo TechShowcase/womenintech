@@ -11,6 +11,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { FormsModule } from "@angular/forms";
+import { ProfileService } from "../../services/profile.service";
 
 @Component({
 	selector: "app-developers",
@@ -36,10 +37,10 @@ export class DevelopersComponent implements OnInit {
 	filterApplied: boolean = false;
 	selectedField: string = "";
 	showHandsOnCoding: boolean = false;
-	http = inject(HttpClient);
+	profileService = inject(ProfileService);
 
 	ngOnInit(): void {
-		this.http.get<Profile[]>("/data/profiles.json").subscribe((profiles) => {
+		this.profileService.gedDeveloperProfiles().subscribe((profiles) => {
 			this.profiles = profiles;
 			this.fields = Array.from(
 				new Set(this.profiles.map((profile) => profile.field))

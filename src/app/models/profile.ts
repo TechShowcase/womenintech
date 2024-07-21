@@ -4,8 +4,15 @@ export interface Profile {
   mainUrl: string;
   field: string;
   handsOnCoding: HandsOnCoding[]
+  openSource?: OpenSource[];
   technologies: Technologies[];
   activities: Activity[];
+}
+
+export interface OpenSource {
+  involvementType: string;
+  contributionType: string;
+  leadDeveloper: boolean;
 }
 
 export interface HandsOnCoding {
