@@ -38,8 +38,7 @@ export class AppComponent {
 
 	navItems = [
 		{ name: "Software Engineers / Developers", route: "/developers", icon: "developer_board"},
-		{ name: "Open Source Maintainers", route: "/developers", icon: "developer_board"},
-		{ name: "Open Source Contributors", route: "/developers", icon: "developer_board"},
+		{ name: "Open Source Involved", route: "/open-source", icon: "developer_board"},
 		{ name: "Data Scientists / Analysts", route: "/developers", icon: "developer_board"},
 		{ name: "Network / Systems Administrators", route: "/developers", icon: "developer_board"},
 		{ name: "Cybersecurity Specialists", route: "/developers", icon: "developer_board"},

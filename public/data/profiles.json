@@ -1,7 +1,7 @@
 [
   {
     "name": "Jane Doe",
-    "image": "https://raw.githubusercontent.com/monacodelisa/images/main/users/chalotte-bell.png",
+    "image": "https://raw.githubusercontent.com/monacodelisa/images/main/users/emily-thorne.png",
     "mainUrl": "https://janedoe.dev",
     "field": "Software Developer",
     "handsOnCoding": [
@@ -9,6 +9,13 @@
         "status": true,
         "inRealTime": true,
         "platform": "GitHub"
+      }
+    ],
+    "openSource": [
+      {
+        "involvementType": "Maintainer",
+        "contributionType": "Code",
+        "leadDeveloper": true
       }
     ],
     "technologies": [
@@ -34,7 +41,7 @@
   },
   {
     "name": "Emily Smith",
-    "image": "https://raw.githubusercontent.com/monacodelisa/images/main/users/chalotte-bell.png",
+    "image": "https://raw.githubusercontent.com/monacodelisa/images/main/users/emily-thorne.png",
     "mainUrl": "https://emilysmith.io",
     "field": "UX/UI Designer",
     "handsOnCoding": [
@@ -42,6 +49,13 @@
         "status": false,
         "inRealTime": false,
         "platform": ""
+      }
+    ],
+    "openSource": [
+      {
+        "involvementType": "Contributor",
+        "contributionType": "Non-Code",
+        "leadDeveloper": false
       }
     ],
     "technologies": [

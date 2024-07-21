@@ -2,11 +2,12 @@ mat-sidenav-container {
   flex: 1 0 auto;
 
   mat-sidenav {
+    width: auto;
 
     mat-nav-list {
 
       a[mat-list-item] {
-        padding: 2rem 1rem !important;
+        padding-right: 1rem;
 
         mat-icon {
           &.rotate {
