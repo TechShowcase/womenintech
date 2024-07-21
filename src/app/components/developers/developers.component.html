@@ -2,10 +2,10 @@
   <div class="filtering">
     <div class="filtering-actions">
       <mat-form-field>
-        <mat-label>Category</mat-label>
-        <mat-select [(ngModel)]="selectedField" (selectionChange)="applyFilter()">
-          @for (field of fields; track field) {
-          <mat-option value="{{field}}">{{field}}</mat-option>
+        <mat-label>Technologies</mat-label>
+        <mat-select [(ngModel)]="selectedTech" multiple  (selectionChange)="applyFilter()">
+          @for (tech of technologies; track tech) {
+          <mat-option value="{{tech}}">{{tech}}</mat-option>
           }
         </mat-select>
       </mat-form-field>

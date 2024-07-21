@@ -11,13 +11,6 @@
         "platform": "GitHub"
       }
     ],
-    "openSource": [
-      {
-        "involvementType": "Maintainer",
-        "contributionType": "Code",
-        "leadDeveloper": true
-      }
-    ],
     "technologies": [
       {
         "name": "JavaScript",
@@ -26,6 +19,13 @@
       {
         "name": "React",
         "icon": "https://example.com/icons/react.png"
+      }
+    ],
+    "openSource": [
+      {
+        "involvementType": "Maintainer",
+        "contributionType": "Code",
+        "leadDeveloper": true
       }
     ],
     "activities": [
@@ -51,13 +51,6 @@
         "platform": ""
       }
     ],
-    "openSource": [
-      {
-        "involvementType": "Contributor",
-        "contributionType": "Non-Code",
-        "leadDeveloper": false
-      }
-    ],
     "technologies": [
       {
         "name": "Figma",
@@ -66,6 +59,13 @@
       {
         "name": "Sketch",
         "icon": "https://example.com/icons/sketch.png"
+      }
+    ],
+    "openSource": [
+      {
+        "involvementType": "Contributor",
+        "contributionType": "Non-Code",
+        "leadDeveloper": false
       }
     ],
     "activities": [
@@ -130,8 +130,8 @@
         "icon": "https://example.com/icons/javascript.png"
       },
       {
-        "name": "React",
-        "icon": "https://example.com/icons/react.png"
+        "name": "Angular",
+        "icon": "https://example.com/icons/angular.png"
       }
     ],
     "activities": [
