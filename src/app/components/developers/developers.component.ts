@@ -1,6 +1,5 @@
 import { Component, inject, OnInit } from "@angular/core";
 import { Profile } from "../../models/profile";
-import { HttpClient } from "@angular/common/http";
 
 import { MatCardModule } from "@angular/material/card";
 import { MatFormFieldModule } from "@angular/material/form-field";
@@ -33,35 +32,30 @@ import { ProfileService } from "../../services/profile.service";
 export class DevelopersComponent implements OnInit {
 	profiles: Profile[] = [];
 	filteredProfiles: Profile[] = [];
-	fields: string[] = [];
+	technologies: string[] = [];
 	filterApplied: boolean = false;
-	selectedField: string = "";
+	selectedTech: string[] = [];
 	showHandsOnCoding: boolean = false;
 	profileService = inject(ProfileService);
 
 	ngOnInit(): void {
 		this.profileService.gedDeveloperProfiles().subscribe((profiles) => {
 			this.profiles = profiles;
-			this.fields = Array.from(
-				new Set(this.profiles.map((profile) => profile.field))
-			);
+			this.technologies = [...new Set(profiles.flatMap(profile => profile.technologies.map(tech => tech.name)))];
 		});
 	}
 
-	applyFilter(): void {
-		this.filterApplied = true;
-		this.filteredProfiles = this.profiles.filter((profile) => {
-			return (
-				(this.selectedField === "" || profile.field === this.selectedField) &&
-				(!this.showHandsOnCoding ||
-					profile.handsOnCoding.some((hoc) => hoc.status))
-			);
-		});
-	}
+  applyFilter(): void {
+    this.filterApplied = true;
+    this.filteredProfiles = this.profiles.filter(profile => {
+      return this.selectedTech.length === 0 ||
+        profile.technologies.some(tech => this.selectedTech.includes(tech.name));
+    });
+  }
 
 	clearFilters(): void {
 		this.filterApplied = false;
-		this.selectedField = "";
+		this.selectedTech = [];
 		this.showHandsOnCoding = false;
 	}
 }

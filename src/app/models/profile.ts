@@ -4,9 +4,14 @@ export interface Profile {
   mainUrl: string;
   field: string;
   handsOnCoding: HandsOnCoding[]
-  openSource?: OpenSource[];
   technologies: Technologies[];
+  openSource?: OpenSource[];
   activities: Activity[];
+}
+
+export interface Technologies {
+  name: string;
+  icon: string;
 }
 
 export interface OpenSource {
@@ -19,11 +24,6 @@ export interface HandsOnCoding {
   status: boolean;
   inRealTime: boolean;
   platform: string;
-}
-
-export interface Technologies {
-  name: string;
-  icon: string;
 }
 
 export interface Activity {
